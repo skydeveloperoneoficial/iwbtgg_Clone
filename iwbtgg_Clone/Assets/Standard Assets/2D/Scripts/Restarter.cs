@@ -10,8 +10,12 @@ namespace UnityStandardAssets._2D
         {
             if (other.tag == "Player")
             {
-                SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
+                SetScene();
             }
+        }
+        public void SetScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
         }
     }
 }

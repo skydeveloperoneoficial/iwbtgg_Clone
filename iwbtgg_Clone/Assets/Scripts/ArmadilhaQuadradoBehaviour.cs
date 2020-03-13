@@ -5,22 +5,17 @@ using UnityStandardAssets._2D;
 public class ArmadilhaQuadradoBehaviour : MonoBehaviour
 {
 
-    public Rigidbody2D rb;
+
     public bool enableGravity;
-    //public Text gameOver;
-    //private Platformer2DUserControl robot;
+    public bool invertGravity;
+    [SerializeField]private Rigidbody2D rd;
     // Use this for initialization
     void Start()
     {
-        rb = FindObjectOfType(typeof(Rigidbody2D)) as Rigidbody2D;
-        //gameOver = FindObjectOfType(typeof(Text)) as Text;
-        //robot = FindObjectOfType(typeof(Platformer2DUserControl)) as Platformer2DUserControl;
-
         enableGravity = false;
-        //gameOver.text = "GameOver";
-        //gameOver.gameObject.SetActive(false);
-       
         
+            
+        //rd = FindObjectOfType(typeof(Rigidbody2D)) as Rigidbody2D;
     }
 
     // Update is called once per frame
@@ -30,20 +25,36 @@ public class ArmadilhaQuadradoBehaviour : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(enableGravity)
-        rb.gravityScale = 7;
+
+        OnGravity();
         
+
     }
+
+    private void OnGravity()
+    {
+        if (enableGravity)
+            rd.gravityScale = 002;
+    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             enableGravity = true;
-            //gameOver.gameObject.SetActive(true);
-            //robot.gameObject.SetActive(false);
+            
             
         }
+        else
+        {
+            enableGravity = false;
+        }
+
+
+
+
 
     }
+   
 
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - armadilha
   - Fish
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -49,24 +49,14 @@ namespace UnityStandardAssets._2D
             m_Jump = false;
         }
 
-        //private void OnTriggerEnter2D(Collider2D collision)
-        //{
-        //    if (collision.gameObject.CompareTag("armadilha"))
-        //    {
-
-        //        gameOver.gameObject.SetActive(true);
-        //        gameObject.SetActive(false);
-
-        //    }
-
-        //}
+      
         private void OnCollisionEnter2D(Collision2D collision)
         {
                 if (collision.gameObject.CompareTag("armadilha"))
                 {
 
                     gameOver.gameObject.SetActive(true);
-                   // gameObject.SetActive(false);
+                  
                     Debug.Log("ok");
                     Destroy(gameObject);
                     

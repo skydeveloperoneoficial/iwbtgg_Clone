@@ -8,11 +8,10 @@ public class PeixeBehaviour : MonoBehaviour
 {
     public  float  speed;
     private Vector3 pos;
-    public bool MoveFish;
+    public bool MoveFish= false;
     public  Text gameOver;
     public bool enableGravity= false;
    [SerializeField] private  float timeToDestroy;
-    public SpriteRenderer spriteRenderer;
     //private Rigidbody2D rb;
     private Platformer2DUserControl robot;
     // Start is called before the first frame update
@@ -22,8 +21,8 @@ public class PeixeBehaviour : MonoBehaviour
         robot = FindObjectOfType(typeof(Platformer2DUserControl)) as Platformer2DUserControl;
         gameOver.text = "GameOver";
         gameOver.gameObject.SetActive(false);
-        MoveFish = false;
-       spriteRenderer = FindObjectOfType(typeof(SpriteRenderer))as SpriteRenderer;
+        
+       
       
     }
 
@@ -38,7 +37,7 @@ public class PeixeBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         if (enableGravity)
-            //rb.gravityScale = 1;
+           
             GetComponent<Rigidbody2D>().gravityScale = 1;
         
         

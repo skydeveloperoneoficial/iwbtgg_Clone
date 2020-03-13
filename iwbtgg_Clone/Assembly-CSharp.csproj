@@ -62,7 +62,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ArmadilhaQuadradoBehaviour.cs" />
     <Compile Include="Assets\Scripts\PeixeBehaviour.cs" />
+    <Compile Include="Assets\Scripts\QuandradoUpBehaviour.cs" />
+    <Compile Include="Assets\Scripts\RestartButtonBehaviour.cs" />
     <Compile Include="Assets\Scripts\TriggerBehaviour.cs" />
+    <Compile Include="Assets\Scripts\TriggerBehaviourEnd.cs" />
     <Compile Include="Assets\Scripts\TriggerMusicBehaviour.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Hans Peter Arnt/source/repos/ProjectUnity5/iwbtgg_Clone/iwbtgg_Clone/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
